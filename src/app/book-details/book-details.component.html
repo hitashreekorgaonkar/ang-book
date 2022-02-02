@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row justify-content-md-center my-5">
+    <div *ngIf="bookdetail" class="col-sm-12 col-md-8">
+
+      <div class="card shadow">
+        <div class="card-body">
+          <h5 *ngIf="bookdetail?.subject_times">{{ bookdetail?.subject_times}}</h5>
+          <h6 *ngIf="bookdetail?.title" class="card-title ">Title: <span class="highlight">{{ bookdetail?.title
+              }}</span></h6>
+          <div *ngFor="let list of bookdetail.excerpts; let j = index" class="">
+            <h6 *ngIf="list.pages" class="card-title ">Pages: <span class="highlight">{{ list.pages }}</span></h6>
+          </div>
+
+          <h6 *ngIf="bookdetail?.first_publish_date" class="card-title ">Publish Date: <span class="highlight">{{
+              bookdetail?.first_publish_date }}</span></h6>
+          <h6 *ngIf="bookdetail?.latest_revision" class="card-title ">Latest Edition: <span class="highlight">{{
+              bookdetail?.latest_revision }}</span></h6>
+
+          <h6 *ngIf="bookdetail?.description?.value" class="card-title ">Description: <span class="highlight">{{
+              bookdetail?.description?.value }}</span></h6>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

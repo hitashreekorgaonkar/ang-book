@@ -1,0 +1,14 @@
+.corner1 {
+ border-radius: 20px;
+}
+
+.box:hover {
+ border: 1px solid #c8ced3;
+ box-shadow: none !important;
+}
+
+.card {
+ /* margin-bottom: 1.5rem; */
+ border: none;
+
+}
